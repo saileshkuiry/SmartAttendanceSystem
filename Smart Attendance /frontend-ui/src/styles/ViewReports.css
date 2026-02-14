@@ -1,0 +1,153 @@
+.report-container {
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 16px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Header */
+.report-header {
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  color: white;
+  padding: 22px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.35);
+}
+
+.report-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.report-header p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Card */
+.report-card {
+  background: white;
+  margin-top: 22px;
+  padding: 22px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.report-card h3 {
+  margin-bottom: 14px;
+}
+
+/* Filters */
+.filter-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.filter-grid select,
+.filter-grid input {
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #f3f4f6;
+  font-size: 14px;
+  outline: none;
+}
+
+.filter-grid select:focus,
+.filter-grid input:focus {
+  background: #eef2ff;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.3);
+}
+
+.filter-btn {
+  margin-top: 14px;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* List Header */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.list-header input {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  background: #f3f4f6;
+  outline: none;
+}
+
+/* Table */
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  font-size: 14px;
+  text-align: left;
+}
+
+thead {
+  background: #f1f5f9;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Status */
+.status {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.present {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.status.absent {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Export */
+.export-btn {
+  margin-top: 14px;
+  background: #e0f2fe;
+  color: #0284c7;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .filter-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

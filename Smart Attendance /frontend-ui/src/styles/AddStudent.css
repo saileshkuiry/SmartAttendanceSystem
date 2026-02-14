@@ -1,0 +1,131 @@
+.add-student-container {
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 16px;
+  font-family: "Inter", system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.add-student-header {
+  width: 100%;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  color: white;
+  padding: 20px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.35);
+}
+
+.add-student-header svg {
+  font-size: 36px;
+}
+
+.add-student-header h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.add-student-header p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 2px 0 0;
+}
+
+/* Form */
+.student-form {
+  width: 100%;
+  background: white;
+  margin-top: 22px;
+  padding: 22px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Field wrapper */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Label */
+.field-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Input row */
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f3f4f6;
+  padding: 14px 16px;
+  border-radius: 14px;
+  transition: 0.2s;
+}
+
+.input-row svg {
+  color: #0ea5e9;
+  font-size: 18px;
+}
+
+/* Input */
+.input-row input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 15px;
+  color: #111827;
+}
+
+/* Focus */
+.input-row:focus-within {
+  background: #eef2ff;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.3);
+}
+
+/* Button */
+.save-btn {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.25s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(14, 165, 233, 0.4);
+}
+
+.save-btn:active {
+  transform: scale(0.98);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .add-student-header,
+  .student-form {
+    max-width: 420px;
+  }
+}

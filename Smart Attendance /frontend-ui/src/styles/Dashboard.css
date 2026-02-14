@@ -1,0 +1,314 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.admin-container {
+  min-height: 100vh;
+  background: #f9fafb;
+  padding: 16px;
+}
+
+/* ===================== TOP CARD ===================== */
+.top-card {
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  color: white;
+  padding: 20px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.35);
+}
+
+/* School Info (Logo + Text) */
+.school-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* App Logo */
+.app-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.top-card h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.top-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===================== STATS ===================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.stat.modern {
+  background: white;
+  padding: 16px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+  font-size: 28px;
+  color: #0ea5e9;
+}
+
+.stat h4 {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.stat p {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* ===================== SECTION ===================== */
+.section-title {
+  margin: 26px 4px 12px;
+  font-size: 16px;
+  color: #374151;
+}
+
+/* ===================== ACTIONS ===================== */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.action-card {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.action-card svg {
+  font-size: 24px;
+  color: #0ea5e9;
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(14, 165, 233, 0.25);
+}
+
+/* ===================== MENU ===================== */
+.menu-container {
+  position: relative;
+}
+
+/* Menu Button */
+.menu-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu-btn:hover {
+  background: white;
+  color: #0ea5e9;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 200px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #374151;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background: #f3f4f6;
+}
+
+.menu-icon {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Divider */
+.menu-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 6px 0;
+}
+
+/* Logout */
+.menu-item.logout {
+  color: #ef4444;
+}
+
+.menu-item.logout:hover {
+  background: #fef2f2;
+}
+
+.menu-item.logout .menu-icon {
+  color: #ef4444;
+}
+
+/* ===================== ANIMATION ===================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .action-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .app-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ===================== LOGO (SOFT ZOOM) ===================== */
+
+.logo-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Soft hover effect */
+.logo-wrapper:hover {
+  transform: scale(1.05);   /* reduced zoom */
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+/* Logo image */
+.app-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+/* Extra subtle zoom */
+.logo-wrapper:hover .app-logo {
+  transform: scale(1.03);   /* very small zoom */
+}
+
+
+/* ===================== FOOTER ===================== */
+
+.app-footer {
+  margin-top: 250px;
+  padding: 18px 10px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.app-footer p {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links span {
+  cursor: pointer;
+  color: #0ea5e9;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-links span:hover {
+  color: #0284c7;
+  text-decoration: underline;
+}
